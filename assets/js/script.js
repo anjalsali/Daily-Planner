@@ -35,7 +35,7 @@ $(document).ready(function () {
 
    // Render the calendar on page load
    function renderCalendar() {
-      for (var hour = 9; hour <= 23; hour++) {
+      for (var hour = 9; hour <= 17; hour++) {
          var timeBlock = $("<div>").addClass("row time-block").attr("data-hour", hour);
          var hourCol = $("<div>").addClass("col-md-1 hour").text(dayjs().hour(hour).format(" hA"));
          var textCol = $("<div>").addClass("col-md-10 description");

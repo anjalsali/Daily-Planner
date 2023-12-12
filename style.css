@@ -41,6 +41,10 @@ header {
 .hour {
    background-color: #ffffff;
    color: #000000;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   flex-direction: column;
    border-top: 1px dashed #000000;
 }
 
@@ -60,6 +64,10 @@ header {
 }
 
 .saveBtn {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   flex-direction: column;
    border-left: 1px solid black;
    border-top-right-radius: 15px;
    border-bottom-right-radius: 15px;
@@ -67,7 +75,10 @@ header {
    color: white;
 }
 
+.saveBtn i {
+   font-size: 30px;
+}
 .saveBtn i:hover {
-   font-size: 20px;
+   font-size: 40px;
    transition: all 0.3s ease-in-out;
 }

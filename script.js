@@ -37,9 +37,9 @@ $(document).ready(function () {
    function renderCalendar() {
       for (var hour = 9; hour <= 18; hour++) {
          var timeBlock = $("<div>").addClass("row time-block").attr("data-hour", hour);
-         var hourCol = $("<div>").addClass("col-md-1 hour").text(dayjs().hour(hour).format("hA"));
+         var hourCol = $("<div>").addClass("col-md-1 hour").text(dayjs().hour(hour).format(" hA"));
          var textCol = $("<div>").addClass("col-md-10 description");
-         var eventTextarea = $("<textarea>").attr("rows", "3");
+         var eventTextarea = $("<textarea>");
          var saveCol = $("<div>").addClass("col-md-1 saveBtn").html("<i class='fas fa-save'></i>");
 
          textCol.append(eventTextarea);

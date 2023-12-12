@@ -35,7 +35,7 @@ $(document).ready(function () {
 
    // Render the calendar on page load
    function renderCalendar() {
-      for (var hour = 9; hour <= 17; hour++) {
+      for (var hour = 9; hour <= 18; hour++) {
          var timeBlock = $("<div>").addClass("row time-block").attr("data-hour", hour);
          var hourCol = $("<div>").addClass("col-md-1 hour").text(dayjs().hour(hour).format("hA"));
          var textCol = $("<div>").addClass("col-md-10 description");
@@ -48,9 +48,17 @@ $(document).ready(function () {
       }
    }
 
+   // Event listener for the save button click
+   $(".container").on("click", ".saveBtn", function () {
+      var hour = $(this).parent().attr("data-hour");
+      var text = $(this).siblings(".description").find("textarea").val();
+      saveEvent(hour, text);
+   });
+
    renderCalendar();
    updateCalendar();
    loadEvents();
+
    // Update the calendar every minute
    setInterval(function () {
       updateCalendar();
